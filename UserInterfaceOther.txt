@@ -1,0 +1,46 @@
+菜单，对话框，提醒
+<menu>
+	<item>
+	
+MenuInflater
+Oncreateoptionsmenu
+Menu	
+	add
+	addSubMenu
+//单选
+<menu>
+	<group **beahiveor="single"?>
+ContextMenu
+	1 注册
+	registerforContextMenu 
+	2生成
+	onCreateContextMenu(ContextMenu menu,View v,ContextmenuInfo menuinfo)
+	3 onContextItemSelected()
+
+Dialog &AlertDialog
+Notifcation
+
+1 得到NotificationManager对象
+2 构造Notification实例
+3 Notification设置最新事件提醒
+4 启动提醒
+
+style theme
+
+自定义组件
+视图 onDraw,onMeasure
+事件 监听器 or ontouchevent
+在xml文件中使用内部类
+<view
+  class="com.android.notepad.NoteEditor$MyEditText"
+  id="@+id/note"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="@android:drawable/empty"
+  android:padding="10dip"
+  android:scrollbars="vertical"
+  android:fadingEdge="vertical" />
+非内部类
+<com.android.notepad.MyEditText
+  id="@+id/note"
+  ... />

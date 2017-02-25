@@ -1,0 +1,27 @@
+开发日志
+ ACTION_CALL 需要CALL_PERSIONMISS，直接打出去
+ ACTION_DIAL 只是到拨号键盘
+ 
+ ACTION_SENDTO 有用 ACTION_SEND,ACTION_SEND_MULTIPLE没有用
+  if (intent.resolveActivity(getPackageManager()) != null) {
+        startActivity(intent);
+    }
+通过intent-filter来启动原来进程的activity
+<activity
+	android:name=".LoginActivity"
+	android:label="@string/title_activity_login">
+	<intent-filter>
+		<action android:name="android.intent.action.LOGIN"/>//与Intent.setAction相同就行
+		<category android:name="android.intent.category.DEFAULT"/>
+	</intent-filter>
+</activity>
+	Intent intent=new Intent();
+	intent.setAction("android.intent.action.LOGIN");
+	startActivity(intent);
+	
+模拟器在service无法播放音乐/音乐发不出声音
+
+longclick return false onclick也会调用
+
+F:\github\android4.0\frameworks\base\core\res\res
+

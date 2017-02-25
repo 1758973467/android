@@ -1,0 +1,23 @@
+Activity,Window View的关系
+1 一个activity构造时一定会一个Window(由phoneWindow实现)，并且只有一个
+2 这个窗户有一个ViewRoot(实际为View),Layoutinflater
+3 addView
+4 WindowManagerService接受的消息，并且回调Activity函数，onKeyDown()
+
+Android启动过程
+Linux启动
+	bootloader->kernel
+Android系统启动
+Init.rc
+	Binder守护进程 /system/bin/servicemanger   守护进程（Daemon）是一种运行在后台的特殊进程，它独立于控制终端并且周期性的执行某种任务或等待处理某些发生的事件。
+	Runtime
+	Zygote 
+	Start VM
+	System Server
+	start Android Services
+	Start Launcher
+应用程序启动
+	Running PackageManager
+	
+	
+	

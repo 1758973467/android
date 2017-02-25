@@ -1,0 +1,141 @@
+UI
+	用户交互设计师-给想法和具体UI设计草图
+	视觉设计师（传统美工）-实现想法->真正的界面
+	界面实现->程序员/视觉设计师
+
+	可以分离，程序员可以不管layout，由视觉设计师来实现
+
+UI学习 
+	1 界面Componment 呈现
+	 动态or xml
+	呈现核心 View重载onDraw(),
+	2 android界面事件机制
+framebuffer skia(2D图象显示)->View->app
+			openGL（3D图象显示）->app
+
+android事件分类
+	1 keyevent //实体按键
+	2 touchevent//触摸屏幕
+	3 tailrailevent//轨迹球
+事件触发方法
+ 1 设置事件监听器
+ 2 扩展View
+ 
+自定义View 需要焦点
+消息分发dispatchEvent
+keyEvent 
+	第一步 消息发到当前上下文（Context（activity里有））
+	第二步 Context->window
+         如果有输入法，优先发给输入法
+		 发给rootView(DecorView)
+		 发给焦点View
+touchEvent 
+	消息从上往下即从焦点View->rootview->window->Context
+//画图
+Canvas//整个屏幕都是画布
+		常用的draw***
+		clip & matrix
+		save & restore
+	sufaceView 更平滑的画，一般是double buffer
+drawable why引入
+必须要设置setBounds();
+         常用 BitmapDrawable
+			  ShapeDrawable
+			  Custom Drawable
+		定义和实现Drawable 1 用资源文件
+						   2 xml文件
+						   3 编码构造
+9 patch
+工具 "D:\java\sdk\tools\draw9patch.bat"
+
+TextView 
+	autolink,textlinkcolor
+	设置图片 drawable
+	HTML 
+		handletag每个都会读，并非只传入不识别的tag
+	Span SpanStringBuilder 在android.text,android.text.style
+	事件
+	关于主题
+	跑马灯效果
+	focusable,focusableInTouchMode
+	singleline=true
+	(maxline=1//无效)
+	,ellipsize="marquee",margqueeRepeatLimit="margquee_forever"
+Button
+	setimage
+	drawable selector
+toggleButton
+	setimage
+	增加事件 onCheckchangListener
+checkbox
+
+radiobutton,radiogroup 
+	设置图片
+	去掉固有图形/改变位置 ，Button="@null"
+	radiogroup做工具条
+checkTextView
+ check
+Spinner
+	adapter
+	自定义adapter
+Progressbar
+max：100（默认）
+seekbar	
+
+edittext形状 在drawable shape
+		hint 
+		前面画图
+		输入限制
+AutocompleteTextView
+
+listview
+adapter notifydatachang是观察者模式
+observe,observeable
+学习组件 helloview,具体类，apidemo
+ExpandableListView
+	SimpleExpandableListAdapter
+
+GridView
+
+ScrolView //滚动条
+	1 里面只能放一个子元素
+	2 RootView
+Tabhost && TabWidget
+Tabhost 继承于FrameLayout
+TabWidget继承于Linearlayout
+Tabhost可以切换不同的activity
+	indicator,Content
+imageview,imagebutton
+gallery
+datepick
+viewswitch
+布局
+linearlayout
+framelayout
+relativelayout
+absloutelayout
+tablayout
+gridlayout
+constranitlayout
+·
+公共属性
+weight 0代表不拉神
+gravity 子控件对于父控件的位置
+
+RelativeLayout
+	layout_Above
+	Layout_Align
+	Layout_AlignParent
+TabLayout&TableRow
+	不用指定TableRow的Layout_width&layout_height							
+	如果TableRow的parent不是TableLayout自动转为水平的LinearLayout
+	TabLayout
+	stretchCloumns指定的列伸缩
+	collapseColumns指定的咧消失
+	sgrinkColumns
+	TabRow的子元素
+	Layoutspan表示跨级个元素
+	
+	
+
+

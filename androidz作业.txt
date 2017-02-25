@@ -1,0 +1,113 @@
+ //作业 完成
+  1 minsdk>机器sdk level android studio无法安装
+  2 生命周期 log
+  3 敲一下Manifest各项元素，熟悉用法
+  4 敲一遍res，熟悉里面的元素名及用法
+  5 建立自己的application类，在生命周期中打log
+  6 adb shell +ps +kill配合分析进程推出
+  7 掌握5个进程等级
+  //完成
+  1 不看视频，将例子做一下
+  2 做一个拨号程序，dial,call的区别
+  //完成
+  1 activity生命周期背过
+  写一个activity发送短信与打电话的例子
+  通过intent-filter来启动原来进程的activity//即像phone一样暴露自己的几个activity共外界程序调用
+  //面试题
+  什么是activity
+  描述一下activity的lifeclycle
+  描述一下activity的Task Stack
+  activity与window，view的关系
+  Intent是什么
+  activity如何保存和恢复状态
+  //作业 
+  bound service 与start service区别
+  //练习
+  IntentService
+  Service
+  boundService 
+  IBinder 相关内容理解
+  //面试题
+  什么是Binder 
+  什么是Service
+  描述一下Service的生命周期
+  service分类
+  Service是进程or线程
+  StartedService和BoundService区别
+  //作业 完成
+  使用Service来写一个音乐播放程序，分别使用startService,BindService实现
+  感想
+  bindservice 在serviceconnevted拿到句柄就简单了
+  不能unbind多次
+  //作业 完成
+  9-patch练习
+  drawable练习
+  canvas练习
+  try 模拟 onClick,onLongClick,
+  //作业
+  实现随手记的主界面
+  //要求
+  掌握view与ViewGroup类
+  //面试题
+  View类是所有控件的基类，说一下他与Activity的关系
+  View的核心是什么，说一下里面的onDraw函数
+  自定义组件如何实现自定义事件的
+  NinePatch是干什么的，会用吗
+  简单介绍一下Android界面事件机制
+  //要求
+  研究Sqlite3数据库特性，并且对比大型数据库的包含存储过程，主外键关联特性
+  使用PreferenceActivity&PreferenceScreen做专业的Setting功能
+  //作业  
+  写一个简单的学员签到客户端，至少2个activity,一个为签到activity,另一个为已签到学员列表
+  仿造系统Setting任意一个界面，做出demo
+
+  //面试题
+  说出Androids数据存储的几种方式
+  Sqlite3能支持存储过程吗，支持主外键关联吗
+  如何让自己的Setting程序与系统Setting程序融合
+  //作业 完成
+  写一个demo，结合ListView组件读取系统基本Contacts信息
+  写一个demo，自定义Provider
+  //面试题
+  ContentProvider与Android数据存储的关系 数据库操作
+  ContentProvider对象何时实例化 //调用Uri
+  ContentProvider数据模型画出来
+  ContentProvider的机制是什么
+  //作业 完成
+  写一个demo，发送一个消息，并且自己接受这个消息，弹出Notification提醒
+  //面试题
+  说说Android中发送的两种广播分别是？以及他们的区别
+  编写BroadcastReceiver时候的注意事项?
+  //要求
+  AppWidget实现及原理
+  理解AppWidget通信原理
+  //作业 完成
+  写一个shortcut//过时
+  自动添加一个shortcut到HomeScreen//过时
+  写一个LiveFolder//过时
+  写一个Widget 四个实验
+		AppWidget
+		给当前AppWidget加入点击事件支持并且更改View状态
+		给当前AppWidget加入ConfiguretionActivity支持
+		在Widget触发事件->app里的事件
+  //面试题
+  说一下AppWidget如何实现的
+  AppWidget实际上是什么类
+  如何让软件自动添加shortcut->homescreen
+  //作业
+  
+  //面试题
+  什么是style,theme,两者区别
+  在不重启Activity,不切换布局文件的情况下，如何给Activity换肤
+  在数据量很大时，如何提高ListView响应速度
+  阐述创建自定义控件的一般步骤
+  分别描述如何让Activity及控件使用动画
+  //深入浅出作业
+  你了解android系统启动过程
+  Zygote进程是什么
+  //作业
+  完成Animation demo
+  apple 程序长按浮动的效果
+  
+  
+  

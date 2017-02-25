@@ -1,0 +1,40 @@
+service定义
+在后台运行，不与用户交互
+默认情况下，Service运行在应用程序进程的主线程中，如果需要在Service中进行网络等耗时操作，应放在单独的线程中处理，避免ANR
+
+service不是一个进程，也不是线程，而是与当前进程进行绑定
+service 分类 
+Started Service 
+Bound Service 1 local service
+			  2 remote service
+
+service lifecycle
+startservice onCreate()->onStartCommand()->service runing->onDestroy()
+bindservice  onCreate()->onbind()->cilents are bound to service->onUnbind()->onDestroy()
+创建及使用service
+1 继承Service类实现自己的服务
+2 在manifest中注册
+3 startService()
+4 stopService,stopSelf()
+
+绑定与使用service
+
+IntentService
+异步处理服务，新开了一个线程：HandlerThread
+在线程中发消息，然后接收，
+处理完成后，会清除线程，并且关掉服务
+
+
+Binder是一个进程间共享数据（IPC）的东西
+由linux kernel的字符共享设备改的
+android将其封装改进从而使其在不同进程间进行调用方法的机制，C-S结构
+
+
+StartService和启动它的activity不同生共死
+boundservice反之
+
+caution：
+当startservice存在时，再次startService()从onStartCommand开始
+
+ 
+

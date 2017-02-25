@@ -1,0 +1,51 @@
+ContentProvider
+	是一套存储访问数据的通道，无需了解下面的存储细节实现数据操作及其共享
+	定义ContentProvider对象，会在系统初始化对象时候自动实例化，无需手动实例化
+	只需要通过ContentResolver去取和操作数据即可 
+	对外提供的模型是一样的
+ContentProvider系统启动时实例化
+android:multinprocess//默认为本app使用
+ContentResolver&ContentProvider
+	// Queries the user dictionary and returns results
+	mCursor = getContentResolver().query(
+    UserDictionary.Words.CONTENT_URI,   // The content URI of the words table
+    mProjection,                        // The columns to return for each row
+    mSelectionClause                    // Selection criteria
+    mSelectionArgs,                     // Selection criteria
+    mSortOrder);                        // The sort order for the returned rows
+
+URi content://user_dictionary/words
+有时contentprovider 需要Content Provider Permissions
+创建自己的ContentProvider
+协议      android:authority                table
+content://com.example.app.provider/table1: A table called table1.
+CursorLoader//防止获得的Cursor导致的各种问题
+系统提供ContentProvider
+Contacts/People App 
+DocumentsProvider 
+
+
+
+BroadcastReceiver //在主线程里
+<intent-filter>
+	<action android:name="demo.example.as.myanroiddemo"></action>
+</intent-filter>
+发送消息 设置Intent的action
+sendBoradcast
+//接受消息后必须在10s内处理完成（ANR），否则多线程
+接收消息 通过action过滤
+创建自己的BroadcastReceiver
+
+Message->Queue(消息队列)->Looper(分发消息)
+         从Queue，Looper由系统控制
+常规广播（所有注册receiver应用都接受得到），
+排序广播(有顺序的广播，可控制是否继续广播)
+
+sendStickBoroadcast 消息处理完后消息体不移除
+
+排序消息
+指定优先级 Intent-filter priority 数值
+数值大的优先，系统的一般为负数
+abortBroadcast
+
+	

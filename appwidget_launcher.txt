@@ -1,0 +1,100 @@
+Launcher
+构成
+homescreen
+workspace
+	appwidget
+	wallpaper
+hotseats
+
+ALLApps
+类型
+ 
+AppWidget 
+1 界面显示复杂
+2 事件不再单一
+3 进程间通讯(不断通讯)
+设计思路
+	Binder (Service&AppWidgetManager)
+	序列化复杂界面传输(Intent <meta-data>)
+	为了刷新，Boroadcast,BoradcasrRecevier
+	
+appwidget箱模型（appwidget.png）
+
+
+<meta-data android:value   android:resources> 
+resources为xml文件
+<appwidget-provider>
+Minwidth,MinHeight
+updatePeriodMills ->更新周期 
+initiallayout
+configure ->activity配置appwidget
+previewImage
+
+homescreen 手机4*4单元格 平板8*7 每格37-38dp
+每个单元格边缘2dp
+自动补齐机制
+RemoteViews支持
+	FrameLayout
+	LinearLayout
+	RelativeLayout
+	GridLayout
+AppwidgetProvider
+	onReceive 默认的消息接收重载
+	onUpdate 到了时间间隔的时候接受到的消息（appwidget发来）
+	onDelete 删除一个appwidget
+	onDisable 最后一个appwidget删除时
+	onEnable 第一次add appwidget
+AppWidget 设置
+	1 step
+	<activity android:name=".ExampleAppWidgetConfigure">
+		<intent-filter>
+			<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+		</intent-filter>
+	</activity>
+	2 step
+	<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    ...
+    android:configure="com.example.android.ExampleAppWidgetConfigure" 
+    ... >
+	</appwidget-provider>
+	java文件
+		Intent intent = getIntent();
+		Bundle extras = intent.getExtras();
+		if (extras != null) {
+			mAppWidgetId = extras.getInt(
+					AppWidgetManager.EXTRA_APPWIDGET_ID, 
+					AppWidgetManager.INVALID_APPWIDGET_ID);
+		}
+		AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
+		//实例化
+		RemoteViews views = new RemoteViews(context.getPackageName(),
+		R.layout.example_appwidget);
+		//更新Appwidget
+		appWidgetManager.updateAppWidget(mAppWidgetId, views);
+		Intent resultValue = new Intent();
+		resultValue.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, mAppWidgetId);
+		setResult(RESULT_OK, resultValue);
+		finish();
+//注意
+在<receiver>里
+<meta-data>里name="android.appwidget.provider"
+AppWidget更新View原理
+	1 Launcher 启动host listening
+	2 service send broadcast
+	3 myApp 接收到->onUpadte
+	4 回调RemoteViews->Service
+	5 Service改变host,updateAppWidget
+	6 Launcher监听到了->呈现
+Launcher
+	1 了解系统启动过程
+	2 了解系统如何识别和启动Launcher
+	3 设计框架界面
+	（1）HomeScreen workspace {shortcut,livefloder,wallpaper,AppWidget}
+					hotseats
+	（2）AllApplist 通过PackageManager加载App
+	主题/皮肤
+	横纵切换
+	多国语言
+
+	
+					

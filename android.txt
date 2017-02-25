@@ -1,0 +1,91 @@
+1 android应用框架图
+2 第三方 data/app/
+assets与raw区别
+	1 raw会生成id，assets不会
+	2 getAssets(),getResources().openRawResources()
+	3 raw会压缩，assets不会压缩
+反编译 
+	dx 把.class编译成dex,aapt把dex+其他打包成apk
+	dexdump dex->smali
+	apktool
+ANR 
+	1 点击事件和按键事件5s无响应
+	2 接收消息10s 无响应
+IO操作和复杂的运算用异步解决
+android应用程序基本特征
+	1 apk 是android应用程序安装格式,dex是android二进制执行文件格式
+	2 android操作系统是基于linux的多用户操作系统，每个应用程序都是使用的不同用户
+	3 默认情况，一个应用程序一个userid,系统设定，用户有权限进行所有操作
+	4 每个进程都有自己的虚拟机实例，每个应用程序相对独立
+	5 默认情况，应用程序都有自己的linux进程，系统会在内存不足时
+	6 例外，可以给两个应用程序共享一个userid，让彼此共享数据,应用程序可以请求访问系统资源（需安装时被授权）
+//一切皆是类
+android四大组件 必须要注册
+		1 Activity setContentView
+		2 Service 必须继承Service类且在配置文件中进行注册
+		3 Content Provider 用于多个应用程序之间的数据交互
+		4 Broadcast Receiver对外部事件做出相应，可以用Context.sendBroadcast()
+		将自己的Intent广播出去，其他程序通过自身的Broadcast Receiver截获后进行处理
+
+	Intent
+	1 activity(startActivity,startActivityForResult),
+	2 service(startService,bindService),
+	3 broadcast(sendBroadcast,sendOrderedBroadcast,sendStickyBroadcast),
+	4 执行一个查询ContentResolver的query
+	launcher&Widget(小插件)
+	Notification
+res value string,array,location,dimen,color
+	style,theme
+	drawable,
+	layout,
+	menu,
+	anim
+单位 px,in(英寸),pt(点距),mm,dp(密度无关像素)->控件大小,sp(范围无关像素)->font
+
+列表点击变颜色通过selector进行实现
+png,jpg,gif
+平面动画两种
+1 tween 存放anim
+2 frame by frame 存放drawable
+	调用res资源
+	getResources()
+	?style
+	调用系统资源
+	@android:
+AndroidManifest.xml
+ 应用程序全局配置文件
+ <uses-permission>
+ <intent>
+ <intent-filter>
+
+ 定义instrumayion做测试
+	 1应用程序安装时，manifest信息会放到一张系统索引表
+	 2系统启动时，PackageManageService读取Manifest信息
+	 3应用程序启动时，launcher进行系统级判断，比如minSDK>当前机器，测试启动现象
+	 4四大组件在需要时才会实例化
+ 进程等级
+ 1 active process
+   activity resume()
+   正在于服务交互
+   正处于服务在前台运行（startforeground）
+   service生命周期函数被执行
+   BroadcastReceiver正在执行onResume()
+ 2 visible porcess
+ 3 start service process
+ 4 background process
+ 不可见的activity，同时无相关service调用
+ 5 empty process
+  无任何component运行的activity,只是缓存
+  
+  
+  finish（）只是退出当前进程
+  //退出
+  System.exit(0)
+  Process.KillProcess()
+ 
+
+
+ 
+ 
+ 
+ 

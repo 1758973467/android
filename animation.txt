@@ -1,0 +1,35 @@
+animation
+分类
+	Property animation
+		ViewAnimation
+		ObjectAnimation
+	View animation( 别名TweenAnimation)
+		AlphaAnimation
+		RoateAnimation
+		ScaleAnimation
+		TranslateAnimation 渐变动画
+	Drawable animation( 别名 FrameAnimation)
+Interpolator 对动画中的某些参数
+	CycleInterpolator
+	AccererlateInterpolator
+	DecelerateInterpolator
+	AccererlateDecelerateInterpolator
+AnimationSet
+
+View startAnimation方法
+
+Android动画实现原理
+	动画运行模式 独占模式
+				 多线程
+	Animation类
+	Interpolater
+	Transformation
+	View实现动画过程
+为Activity指定动画效果
+	activityOpenEnterAnimation
+	activityOpenExitAnimation
+	activityCloseEnterAnimation
+	activityCloseExitAnimation
+PendingTransition 但必须在startActivity后接着调用，只有效一次
+
+	

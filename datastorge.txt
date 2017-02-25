@@ -1,0 +1,34 @@
+数据存储
+类型
+1 xml share prefences
+2 binary file
+3 关系型数据库 sqlite3
+4 网络存储 network socket,http,https
+数据库特性
+1 SQL Sqlite完整支持
+2 视图 support
+3 存储过程 support
+4 主外键关系 support
+5 事务 support
+6 触发器 support
+7 索引 support
+Sqlite 默认的给每张表的主键名称为_id
+
+关系型数据库使用
+1 创建DB
+2 建立DBconnection
+3 执行Sql
+4 if 有返回-》use
+5 关闭连接
+
+事务
+	BeginTransaction
+	SetTransactionSuccessful
+	EndTransaction
+
+SQLiteOpenHelper
+getReadableDatabase()
+getWriteableDatabase()
+onCreate
+onUpgrade
+
