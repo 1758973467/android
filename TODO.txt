@@ -1,0 +1,24 @@
+2-23
+1 随手记界面做成->finish
+4 appwidget->finish
+2-24
+1 写一个简单的学员签到客户端，至少2个activity,一个为签到activity,另一个为已签到学员列表 ->finish
+2 仿造系统Setting任意一个界面，做出demo->finish
+3 安装看源码的工具->finish
+2-25
+1 洗澡，还书
+2 学习到深入篇39
+3 android深入浅出学习完4个
+4 深入编看到36
+
+2-26
+1 打电话-》还款
+2 深入篇看到45
+3 简单搞定vps 搬瓦工
+2-27
+
+1 下载 android 6，7源码
+2 写论文，精准农业（肥料计算）
+3 
+学习一下外键的知识
+android sqlite view 好像不可用

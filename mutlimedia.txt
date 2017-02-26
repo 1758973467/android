@@ -1,1 +1,59 @@
-多媒体
+multimedia
+音乐与视频播放
+	MediaPlayer 使用MediaPlayer加载资源
+				MediaPlayer控制状态图
+					
+				使用异步状态图
+				使用异步prepareAsync
+				MediaPlayer释放 
+					MediaPlayer使用完及时release()
+				使用后台服务
+					
+				使用wakelock
+					添加<users-permission>
+					屏幕
+					wifiLock
+				运行前台服务
+					String songName;
+					// assign the song name to songName
+					PendingIntent pi = PendingIntent.getActivity(getApplicationContext(), 0,
+	1				                new Intent(getApplicationContext(), MainActivity.class),
+					                PendingIntent.FLAG_UPDATE_CURRENT);
+					Notification notification = new Notification();
+					notification.tickerText = text;
+					notification.icon = R.drawable.play0;
+					notification.flags |= Notification.FLAG_ONGOING_EVENT;
+					notification.setLatestEventInfo(getApplicationContext(), "MusicPlayerSample",
+					                "Playing: " + songName, pi);
+					startForeground(NOTIFICATION_ID, notification);
+
+
+					//不再用了，停止服务
+					stopForeground(true);
+	
+				操作声音焦点
+					当有其他声音响起时，mediaplayer的声音控制
+	
+	MediaPlayer OnErrorListener.onError
+	MediaPlayer.create()->prepared state
+	MediaPlayer注意事项
+	1 而 new 进入idle state
+	2 MediaPlayer 一旦出错便进入error 则需 reset()重新进入idle
+	3 error state调用prepare()orprepareAsync() 会throw ILLegalStateException
+	4 必须先进入prepared state才可以start
+	5 setDataSource->Idle->Initalized illagelArgumentException 和 IOException
+	6 prepare()/prepareAsync()+setOnPreparedListener()
+	7 在 stated state isPlaying() setOnBufferingUpdateListener()监听播放进度
+	8 pause(),stop()会 消耗few seconds
+	9 seekTo 调整播放进度
+	
+录制视频 通过Intent录制，使用Media Recoder
+	
+照相及录像 	Intent,控制拍照和录像 （监测设置，自动对焦，使用预览，生成图片，读写EXIF）
+人脸识别 FaceDetector
+	语音识别 Recognition1
+MediaStore
+	
+	
+	
+	

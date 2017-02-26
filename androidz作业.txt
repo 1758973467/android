@@ -105,9 +105,23 @@
   //深入浅出作业
   你了解android系统启动过程
   Zygote进程是什么
+  //作业 完成
+  完成Animation demo->finish
+  ViewAnimaor demo
+  drag and drop->finish
+  apple 程序长按浮动的效果(optional)
+  //面试题
+  Android支持那些格式的多媒体文件？所有设备支持的格式是否一样的？ aac,flac,mp3,pcm  jpg,gif,png,bmp  MP4
+  MediaPlayer的reset()和release()方法的区别
+  在使用Mediaplayer是如何避免阻塞主线程？
+  在播放音乐，视频时，应如何阻止屏幕关闭？
+  什么是音频焦点？播放音乐时如何改变焦点
+  Android中的人脸识别应实现
+  如何获取Android设备中的媒体文件信息？
   //作业
-  完成Animation demo
-  apple 程序长按浮动的效果
+  相关demo
+  使用MediaPlayer实现一个简单的媒体播放器
+  实现一个简单的照相机，要求在监测到人脸时实现自动对焦。
   
   
   

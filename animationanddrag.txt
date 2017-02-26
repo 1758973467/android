@@ -32,4 +32,20 @@ Android动画实现原理
 	activityCloseExitAnimation
 PendingTransition 但必须在startActivity后接着调用，只有效一次
 
+drag drop
+包含过程
+	longpressed
+	
+	started  getClipDescription() 用MIME_TYPE过滤
+	entered 
+	location dragshadow仍在view对象里
+	exited 
+	drop ClipData(粘贴板数据)
+	ended getResult()判断是否drop success
+	
+DragShadow
+	通过View.DragShadowBuilder
+ViewAnimator ViewFlipper
+
+
 	
