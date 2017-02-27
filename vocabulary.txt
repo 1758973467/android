@@ -8,3 +8,4 @@ For the sake of 为了
 sequentially 继续地，从而
 Migration 迁移
 sequentially 继续
+Two-factor 二元

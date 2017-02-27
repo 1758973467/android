@@ -119,9 +119,21 @@
   Android中的人脸识别应实现
   如何获取Android设备中的媒体文件信息？
   //作业
-  相关demo
   使用MediaPlayer实现一个简单的媒体播放器
   实现一个简单的照相机，要求在监测到人脸时实现自动对焦。
+  //面试题
+  Android多线程如何实现
+  Android多线程与Linux系统的关系
+  Android异步任务有什么办法来实现  thread,Runable,Handler,AsyncTask
+  //深入浅出作业
+  了解概念，看看Linux 多线程 ，设计与实现的书籍
+  //面试题
+  为何Android没有Main函数
+  Android应用程序是如何启动和退出的
+  //深入浅出作业
+  写一个demo,打印出当前进程等级并且用PackageManager分析生命周期
+  Context源码，及相关常用方法
+  
   
   
   

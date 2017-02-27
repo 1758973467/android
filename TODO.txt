@@ -16,9 +16,9 @@
 2 深入篇看到45
 3 简单搞定vps 搬瓦工
 2-27
-
+1 mediaplayer demo完成
 1 下载 android 6，7源码
 2 写论文，精准农业（肥料计算）
-3 
-学习一下外键的知识
-android sqlite view 好像不可用
+3 退课
+4 学习一下外键的知识
+5  ？android sqlite view 好像不可用
