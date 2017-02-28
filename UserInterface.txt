@@ -46,14 +46,14 @@ drawable why引入
 						   2 xml文件
 						   3 编码构造
 9 patch
-工具 "D:\java\sdk\tools\draw9patch.bat"
+工具 java\sdk\tools\draw9patch.bat //Android studio .9.png  之类 就可以编辑
 
 TextView 
 	autolink,textlinkcolor
 	设置图片 drawable
 	HTML 
 		handletag每个都会读，并非只传入不识别的tag
-	Span SpanStringBuilder 在android.text,android.text.style
+	Span SpanStringBuilder 在android.text,android.text.style //练习
 	事件
 	关于主题
 	跑马灯效果
@@ -99,7 +99,7 @@ GridView
 
 ScrolView //滚动条
 	1 里面只能放一个子元素
-	2 RootView
+	2 必须是RootView
 Tabhost && TabWidget
 Tabhost 继承于FrameLayout
 TabWidget继承于Linearlayout

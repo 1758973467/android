@@ -12,14 +12,14 @@ activity window,view的关系
  Intent,IntentFilter
  Intent传值
  
- startActivity的机制
+ startActivity的机制//看源码
  IBinder IPC进程间通讯，Activity四种LaunchMode
  
  定义intent-filter时，定义了<action>必须定义<category>即使为android.intent.category.DEFAULT
  否则在隐式启动时会找不到activity
 
  
- HierarchyViewer 查看控件树,现在用Monitor（D:\java\sdk\tools）
+ HierarchyViewer 查看控件树（java\sdk\tools）
  
  activity生命周期
  保存activity状态
@@ -50,5 +50,5 @@ activity launchMode
  同时它之上的activity会destroy，
  singleTask  
  设置true的activity在backstack只有一个
- singleInstance
+ singleInstance//test 如果多个activity有此属性会如何  new backstack?
  设置true的activity启动时，会在一个新的backstack中有且只有它

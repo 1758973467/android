@@ -27,7 +27,7 @@ Notifcation
 
 style theme
 
-自定义组件
+自定义组件 //xml文件中的attribute属性？如何实现
 视图 onDraw,onMeasure
 事件 监听器 or ontouchevent
 在xml文件中使用内部类

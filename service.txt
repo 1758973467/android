@@ -35,6 +35,3 @@ boundservice反之
 
 caution：
 当startservice存在时，再次startService()从onStartCommand开始
-
- 
-

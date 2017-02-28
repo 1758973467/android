@@ -4,13 +4,13 @@ assets与raw区别
 	1 raw会生成id，assets不会
 	2 getAssets(),getResources().openRawResources()
 	3 raw会压缩，assets不会压缩
-反编译 
+反编译 //可以使用Andoroid studio tools analysis apk
 	dx 把.class编译成dex,aapt把dex+其他打包成apk
 	dexdump dex->smali
 	apktool
 ANR 
 	1 点击事件和按键事件5s无响应
-	2 接收消息10s 无响应
+	2 接收消息10s处理无返回
 IO操作和复杂的运算用异步解决
 android应用程序基本特征
 	1 apk 是android应用程序安装格式,dex是android二进制执行文件格式

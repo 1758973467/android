@@ -22,3 +22,29 @@
 3 退课
 4 学习一下外键的知识
 5  ？android sqlite view 好像不可用
+
+
+//需要重点复习
+ContentResolver&ContentProvider
+	// Queries the user dictionary and returns results
+	mCursor = getContentResolver().query(
+    UserDictionary.Words.CONTENT_URI,   // The content URI of the words table
+    mProjection,                        // The columns to return for each row
+    mSelectionClause                    // Selection criteria
+    mSelectionArgs,                     // Selection criteria
+    mSortOrder);                        // The sort order for the returned rows
+	
+	
+BroadcastReceiver //在主线程里
+<intent-filter>
+	<action android:name="demo.example.as.myanroiddemo"/>
+</intent-filter>
+发送消息 设置Intent的action
+sendBoradcast
+//接受消息后必须在10s内处理完成（ANR），否则多线程
+接收消息 通过action过滤 //应该可以用category,或者其他属性吧，
+创建自己的BroadcastReceiver
+
+ startActivity的机制//看源码
+ TextView Span SpanStringBuilder 在android.text,android.text.style //练习
+ 自定义组件 //xml文件中的attribute属性？如何实现
