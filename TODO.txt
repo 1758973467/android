@@ -16,10 +16,13 @@
 2 深入篇看到45
 3 简单搞定vps 搬瓦工
 2-27
+1 退课
+2 深入篇看到45
+3 深入浅出看完13个 android framework编译系统达不到要求
+2-28
 1 mediaplayer demo完成
 1 下载 android 6，7源码
 2 写论文，精准农业（肥料计算）
-3 退课
 4 学习一下外键的知识
 5  ？android sqlite view 好像不可用
 

@@ -1,0 +1,16 @@
+Javs JNI
+public class HelloJNI{
+ static {
+	System.loadLibrary("Hello");
+ }
+ public native void DisplayHello();
+ public static void main(String []srgs){
+	new HelloJNI().DisplayHello();
+ }
+}
+java源文件目录下有相应的cpp
+1 编写Java class,并定义native方法
+2 使用Javah生成.h文件
+3 建立c/c++动态链接库工程，并实现.h文件
+4 生成.so/dll文件并放到合适的位置
+5 启动Java程序

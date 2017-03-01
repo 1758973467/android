@@ -10,3 +10,7 @@ Migration 迁移
 sequentially 继续
 Two-factor 二元
 vendor 供应商 vendors
+triggered 触发，引发
+stub 树桩; 铅笔头，烟蒂 v 连根拔出
+Transact 交易，谈判
+rewind 重绕

@@ -1,0 +1,21 @@
+创建挂载点
+设置全局环境
+	cpu accounting
+	process groups
+	大量 chmod/chown mkdir
+启动
+ 内存管理
+ tcp
+ daemon process
+ servicemanager
+ zygote start-system-server
+ 
+ 
+ startActivity
+	startActivityForResult
+		mInstrumentation.execStartActivity
+		ActivityManagerNative.getDefault().startActivity 
+		interface IActivityManager  
+		ActivityManagerProxy.startActivity
+		mRemote.transact
+ 
