@@ -26,17 +26,20 @@
 3-1
 1 整理sql查询与创建
 2 将此文件夹上传到github上
-
-
-
 3-2
+1 Context 简单看了一下
+2 android sqlite view 能用 以前是语法错误
+3 sql 看到 存储过程，触发器，事务 但需练习，笔记也未整理
+
+3-3
 1 看一下linux 多线程实现
-2 ？android sqlite view 好像不可用
-3 mediaplayer demo完成
-4 下载 android 6，7源码
+2 TextView Span
+3 下载 android 6，7源码
+4 找老师去重新看一下计划，project 
+5 sql 尽量整理完成
+4 mediaplayer demo完成
 5 写论文，精准农业（肥料计算）
  
-
 
 //需要重点复习
 ContentResolver&ContentProvider

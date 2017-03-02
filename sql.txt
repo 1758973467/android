@@ -174,7 +174,7 @@ with check option 视图是可嵌套的，check option默认会当前视图及�
 
 删除视图
 DROP VIEW view_name
-
+//从这开始需要实验
 索引
 特征 唯一性索引和复合索引
 唯一性索引：索引列中的全部数据是唯一的
@@ -199,3 +199,42 @@ CREATE INDEX UNIQUE 学生信息_学号_index
 ON 学生信息(学号)
 删除索引
 DROP INDEX
+
+存储过程 优势
+1 只在创造时进行编译，以后每次执行存储过程都不再编译，而一般SQL语句每执行一次就编译一次
+2 存储过程一旦执行，在内存就会保留一份，
+3 安全性高
+4 减少网络通信量
+系统存储过程 存储在maaster数据库，其前缀sp_
+sp_databases 		列出服务器下所有数据库
+sp_helpdb 			报告有关指定数据库或所有数据库的信息
+sp_renamedb 		更改数据库名称
+sp_tables			返回当前环境下可查询对象的列表
+sp_columns			返回某个表的所有信息
+sp_help				查看某个表的所有信息
+sp_helpconstraint	查看某个列约束
+sp_helpindex		查看某个列索引
+sp_stored_procedures列出当前环境中的所有存储过程
+sp_password			添加or修改登录账户的password
+sp_helptext			显示默认值，未加密的存储过程，用户定义的存储过程，触发器或视图的实际文本
+
+存储过程的创建
+CREATE PROC [EDURE] [OWNER.] procedure_name[; number]
+[ {@paramaeter data_type}
+[VARYING][=default][OUTPUT]
+][,...n]
+[WITH {ENCRYPTION |RECOMPILE}[,....n]]
+[FOR REPLICATION]
+AS {sql_statement[...n]}
+可在procedure_name前面加#表明创建局部临时存储过程，加##创建全局临时存储过程
+number参数 标识存储过程中的一组，无法单个删除
+@parameter 在create proc 可以创建参数
+VARYING 指定作为参数支持的结果集(由存储过程动态构造，内容可以变化)，只用于CURSOR类型的参数 //貌似没用
+default其值必须为常量or NULL
+OUTPUT 参数为输出参数，
+ENCRYPTION 对CREATE PROCEDURE语句的原始定义文本信息进行加密
+RECOMPILE 表示SQL Server不会缓存该过程的计划，即每次运行都会重新编译
+FOR REPLICATION 表示创建的存储过程只能在复制过程，若指定此参数无法定义参数 //不懂
+
+注意：1 除了CREATE PROCEDURE之外还有CREATE DEFAULT，CREATE RULE,CREATE TRIGGER,CREATE VIEW语句不能与其他语句位于同一批之内
+	  2 不能在一个批中修改一个表的结构，然后在同一个批中引用刚修改的新列

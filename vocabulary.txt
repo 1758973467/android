@@ -13,3 +13,7 @@ triggered 触发，引发
 stub 树桩; 铅笔头，烟蒂 v 连根拔出
 Transact 交易，谈判
 rewind 重绕
+mock 伪造的，模拟的
+exclusive 排外的，单独的
+tape 磁带
+procedure 过程
