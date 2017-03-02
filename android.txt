@@ -1,38 +1,38 @@
-1 androidÓ¦ÓÃ¿ò¼ÜÍ¼
-2 µÚÈı·½ data/app/
-assetsÓërawÇø±ğ
-	1 raw»áÉú³Éid£¬assets²»»á
+1 androidåº”ç”¨æ¡†æ¶å›¾
+2 ç¬¬ä¸‰æ–¹ data/app/
+assetsä¸rawåŒºåˆ«
+	1 rawä¼šç”Ÿæˆidï¼Œassetsä¸ä¼š
 	2 getAssets(),getResources().openRawResources()
-	3 raw»áÑ¹Ëõ£¬assets²»»áÑ¹Ëõ
-·´±àÒë //¿ÉÒÔÊ¹ÓÃAndoroid studio tools analysis apk
-	dx °Ñ.class±àÒë³Édex,aapt°Ñdex+ÆäËû´ò°ü³Éapk
+	3 rawä¼šå‹ç¼©ï¼Œassetsä¸ä¼šå‹ç¼©
+åç¼–è¯‘ //å¯ä»¥ä½¿ç”¨Andoroid studio tools analysis apk
+	dx æŠŠ.classç¼–è¯‘æˆdex,aaptæŠŠdex+å…¶ä»–æ‰“åŒ…æˆapk
 	dexdump dex->smali
 	apktool
 ANR 
-	1 µã»÷ÊÂ¼şºÍ°´¼üÊÂ¼ş5sÎŞÏìÓ¦
-	2 ½ÓÊÕÏûÏ¢10s´¦ÀíÎŞ·µ»Ø
-IO²Ù×÷ºÍ¸´ÔÓµÄÔËËãÓÃÒì²½½â¾ö
-androidÓ¦ÓÃ³ÌĞò»ù±¾ÌØÕ÷
-	1 apk ÊÇandroidÓ¦ÓÃ³ÌĞò°²×°¸ñÊ½,dexÊÇandroid¶ş½øÖÆÖ´ĞĞÎÄ¼ş¸ñÊ½
-	2 android²Ù×÷ÏµÍ³ÊÇ»ùÓÚlinuxµÄ¶àÓÃ»§²Ù×÷ÏµÍ³£¬Ã¿¸öÓ¦ÓÃ³ÌĞò¶¼ÊÇÊ¹ÓÃµÄ²»Í¬ÓÃ»§
-	3 Ä¬ÈÏÇé¿ö£¬Ò»¸öÓ¦ÓÃ³ÌĞòÒ»¸öuserid,ÏµÍ³Éè¶¨£¬ÓÃ»§ÓĞÈ¨ÏŞ½øĞĞËùÓĞ²Ù×÷
-	4 Ã¿¸ö½ø³Ì¶¼ÓĞ×Ô¼ºµÄĞéÄâ»úÊµÀı£¬Ã¿¸öÓ¦ÓÃ³ÌĞòÏà¶Ô¶ÀÁ¢
-	5 Ä¬ÈÏÇé¿ö£¬Ó¦ÓÃ³ÌĞò¶¼ÓĞ×Ô¼ºµÄlinux½ø³Ì£¬ÏµÍ³»áÔÚÄÚ´æ²»×ãÊ±
-	6 ÀıÍâ£¬¿ÉÒÔ¸øÁ½¸öÓ¦ÓÃ³ÌĞò¹²ÏíÒ»¸öuserid£¬ÈÃ±Ë´Ë¹²ÏíÊı¾İ,Ó¦ÓÃ³ÌĞò¿ÉÒÔÇëÇó·ÃÎÊÏµÍ³×ÊÔ´£¨Ğè°²×°Ê±±»ÊÚÈ¨£©
-//Ò»ÇĞ½ÔÊÇÀà
-androidËÄ´ó×é¼ş ±ØĞëÒª×¢²á
+	1 ç‚¹å‡»äº‹ä»¶å’ŒæŒ‰é”®äº‹ä»¶5sæ— å“åº”
+	2 æ¥æ”¶æ¶ˆæ¯10så¤„ç†æ— è¿”å›
+IOæ“ä½œå’Œå¤æ‚çš„è¿ç®—ç”¨å¼‚æ­¥è§£å†³
+androidåº”ç”¨ç¨‹åºåŸºæœ¬ç‰¹å¾
+	1 apk æ˜¯androidåº”ç”¨ç¨‹åºå®‰è£…æ ¼å¼,dexæ˜¯androidäºŒè¿›åˆ¶æ‰§è¡Œæ–‡ä»¶æ ¼å¼
+	2 androidæ“ä½œç³»ç»Ÿæ˜¯åŸºäºlinuxçš„å¤šç”¨æˆ·æ“ä½œç³»ç»Ÿï¼Œæ¯ä¸ªåº”ç”¨ç¨‹åºéƒ½æ˜¯ä½¿ç”¨çš„ä¸åŒç”¨æˆ·
+	3 é»˜è®¤æƒ…å†µï¼Œä¸€ä¸ªåº”ç”¨ç¨‹åºä¸€ä¸ªuserid,ç³»ç»Ÿè®¾å®šï¼Œç”¨æˆ·æœ‰æƒé™è¿›è¡Œæ‰€æœ‰æ“ä½œ
+	4 æ¯ä¸ªè¿›ç¨‹éƒ½æœ‰è‡ªå·±çš„è™šæ‹Ÿæœºå®ä¾‹ï¼Œæ¯ä¸ªåº”ç”¨ç¨‹åºç›¸å¯¹ç‹¬ç«‹
+	5 é»˜è®¤æƒ…å†µï¼Œåº”ç”¨ç¨‹åºéƒ½æœ‰è‡ªå·±çš„linuxè¿›ç¨‹ï¼Œç³»ç»Ÿä¼šåœ¨å†…å­˜ä¸è¶³æ—¶
+	6 ä¾‹å¤–ï¼Œå¯ä»¥ç»™ä¸¤ä¸ªåº”ç”¨ç¨‹åºå…±äº«ä¸€ä¸ªuseridï¼Œè®©å½¼æ­¤å…±äº«æ•°æ®,åº”ç”¨ç¨‹åºå¯ä»¥è¯·æ±‚è®¿é—®ç³»ç»Ÿèµ„æºï¼ˆéœ€å®‰è£…æ—¶è¢«æˆæƒï¼‰
+//ä¸€åˆ‡çš†æ˜¯ç±»
+androidå››å¤§ç»„ä»¶ å¿…é¡»è¦æ³¨å†Œ
 		1 Activity setContentView
-		2 Service ±ØĞë¼Ì³ĞServiceÀàÇÒÔÚÅäÖÃÎÄ¼şÖĞ½øĞĞ×¢²á
-		3 Content Provider ÓÃÓÚ¶à¸öÓ¦ÓÃ³ÌĞòÖ®¼äµÄÊı¾İ½»»¥
-		4 Broadcast Receiver¶ÔÍâ²¿ÊÂ¼ş×ö³öÏàÓ¦£¬¿ÉÒÔÓÃContext.sendBroadcast()
-		½«×Ô¼ºµÄIntent¹ã²¥³öÈ¥£¬ÆäËû³ÌĞòÍ¨¹ı×ÔÉíµÄBroadcast Receiver½Ø»ñºó½øĞĞ´¦Àí
+		2 Service å¿…é¡»ç»§æ‰¿Serviceç±»ä¸”åœ¨é…ç½®æ–‡ä»¶ä¸­è¿›è¡Œæ³¨å†Œ
+		3 Content Provider ç”¨äºå¤šä¸ªåº”ç”¨ç¨‹åºä¹‹é—´çš„æ•°æ®äº¤äº’
+		4 Broadcast Receiverå¯¹å¤–éƒ¨äº‹ä»¶åšå‡ºç›¸åº”ï¼Œå¯ä»¥ç”¨Context.sendBroadcast()
+		å°†è‡ªå·±çš„Intentå¹¿æ’­å‡ºå»ï¼Œå…¶ä»–ç¨‹åºé€šè¿‡è‡ªèº«çš„Broadcast Receiveræˆªè·åè¿›è¡Œå¤„ç†
 
 	Intent
 	1 activity(startActivity,startActivityForResult),
 	2 service(startService,bindService),
 	3 broadcast(sendBroadcast,sendOrderedBroadcast,sendStickyBroadcast),
-	4 Ö´ĞĞÒ»¸ö²éÑ¯ContentResolverµÄquery
-	launcher&Widget(Ğ¡²å¼ş)
+	4 æ‰§è¡Œä¸€ä¸ªæŸ¥è¯¢ContentResolverçš„query
+	launcher&Widget(å°æ’ä»¶)
 	Notification
 res value string,array,location,dimen,color
 	style,theme
@@ -40,46 +40,46 @@ res value string,array,location,dimen,color
 	layout,
 	menu,
 	anim
-µ¥Î» px,in(Ó¢´ç),pt(µã¾à),mm,dp(ÃÜ¶ÈÎŞ¹ØÏñËØ)->¿Ø¼ş´óĞ¡,sp(·¶Î§ÎŞ¹ØÏñËØ)->font
+å•ä½ px,in(è‹±å¯¸),pt(ç‚¹è·),mm,dp(å¯†åº¦æ— å…³åƒç´ )->æ§ä»¶å¤§å°,sp(èŒƒå›´æ— å…³åƒç´ )->font
 
-ÁĞ±íµã»÷±äÑÕÉ«Í¨¹ıselector½øĞĞÊµÏÖ
+åˆ—è¡¨ç‚¹å‡»å˜é¢œè‰²é€šè¿‡selectorè¿›è¡Œå®ç°
 png,jpg,gif
-Æ½Ãæ¶¯»­Á½ÖÖ
-1 tween ´æ·Åanim
-2 frame by frame ´æ·Ådrawable
-	µ÷ÓÃres×ÊÔ´
+å¹³é¢åŠ¨ç”»ä¸¤ç§
+1 tween å­˜æ”¾anim
+2 frame by frame å­˜æ”¾drawable
+	è°ƒç”¨resèµ„æº
 	getResources()
 	?style
-	µ÷ÓÃÏµÍ³×ÊÔ´
+	è°ƒç”¨ç³»ç»Ÿèµ„æº
 	@android:
 AndroidManifest.xml
- Ó¦ÓÃ³ÌĞòÈ«¾ÖÅäÖÃÎÄ¼ş
+ åº”ç”¨ç¨‹åºå…¨å±€é…ç½®æ–‡ä»¶
  <uses-permission>
  <intent>
  <intent-filter>
 
- ¶¨Òåinstrumayion×ö²âÊÔ
-	 1Ó¦ÓÃ³ÌĞò°²×°Ê±£¬manifestĞÅÏ¢»á·Åµ½Ò»ÕÅÏµÍ³Ë÷Òı±í
-	 2ÏµÍ³Æô¶¯Ê±£¬PackageManageService¶ÁÈ¡ManifestĞÅÏ¢
-	 3Ó¦ÓÃ³ÌĞòÆô¶¯Ê±£¬launcher½øĞĞÏµÍ³¼¶ÅĞ¶Ï£¬±ÈÈçminSDK>µ±Ç°»úÆ÷£¬²âÊÔÆô¶¯ÏÖÏó
-	 4ËÄ´ó×é¼şÔÚĞèÒªÊ±²Å»áÊµÀı»¯
- ½ø³ÌµÈ¼¶
+ å®šä¹‰instrumayionåšæµ‹è¯•
+	 1åº”ç”¨ç¨‹åºå®‰è£…æ—¶ï¼Œmanifestä¿¡æ¯ä¼šæ”¾åˆ°ä¸€å¼ ç³»ç»Ÿç´¢å¼•è¡¨
+	 2ç³»ç»Ÿå¯åŠ¨æ—¶ï¼ŒPackageManageServiceè¯»å–Manifestä¿¡æ¯
+	 3åº”ç”¨ç¨‹åºå¯åŠ¨æ—¶ï¼Œlauncherè¿›è¡Œç³»ç»Ÿçº§åˆ¤æ–­ï¼Œæ¯”å¦‚minSDK>å½“å‰æœºå™¨ï¼Œæµ‹è¯•å¯åŠ¨ç°è±¡
+	 4å››å¤§ç»„ä»¶åœ¨éœ€è¦æ—¶æ‰ä¼šå®ä¾‹åŒ–
+ è¿›ç¨‹ç­‰çº§
  1 active process
    activity resume()
-   ÕıÔÚÓÚ·şÎñ½»»¥
-   Õı´¦ÓÚ·şÎñÔÚÇ°Ì¨ÔËĞĞ£¨startforeground£©
-   serviceÉúÃüÖÜÆÚº¯Êı±»Ö´ĞĞ
-   BroadcastReceiverÕıÔÚÖ´ĞĞonResume()
+   æ­£åœ¨äºæœåŠ¡äº¤äº’
+   æ­£å¤„äºæœåŠ¡åœ¨å‰å°è¿è¡Œï¼ˆstartforegroundï¼‰
+   serviceç”Ÿå‘½å‘¨æœŸå‡½æ•°è¢«æ‰§è¡Œ
+   BroadcastReceiveræ­£åœ¨æ‰§è¡ŒonResume()
  2 visible porcess
  3 start service process
  4 background process
- ²»¿É¼ûµÄactivity£¬Í¬Ê±ÎŞÏà¹Øserviceµ÷ÓÃ
+ ä¸å¯è§çš„activityï¼ŒåŒæ—¶æ— ç›¸å…³serviceè°ƒç”¨
  5 empty process
-  ÎŞÈÎºÎcomponentÔËĞĞµÄactivity,Ö»ÊÇ»º´æ
+  æ— ä»»ä½•componentè¿è¡Œçš„activity,åªæ˜¯ç¼“å­˜
   
   
-  finish£¨£©Ö»ÊÇÍË³öµ±Ç°½ø³Ì
-  //ÍË³ö
+  finishï¼ˆï¼‰åªæ˜¯é€€å‡ºå½“å‰è¿›ç¨‹
+  //é€€å‡º
   System.exit(0)
   Process.KillProcess()
  

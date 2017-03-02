@@ -1,47 +1,47 @@
 2-23
-1 ËæÊÖ¼Ç½çÃæ×ö³É->finish
+1 éšæ‰‹è®°ç•Œé¢åšæˆ->finish
 4 appwidget->finish
 2-24
-1 Ğ´Ò»¸ö¼òµ¥µÄÑ§Ô±Ç©µ½¿Í»§¶Ë£¬ÖÁÉÙ2¸öactivity,Ò»¸öÎªÇ©µ½activity,ÁíÒ»¸öÎªÒÑÇ©µ½Ñ§Ô±ÁĞ±í ->finish
-2 ·ÂÔìÏµÍ³SettingÈÎÒâÒ»¸ö½çÃæ£¬×ö³ödemo->finish
-3 °²×°¿´Ô´ÂëµÄ¹¤¾ß->finish
+1 å†™ä¸€ä¸ªç®€å•çš„å­¦å‘˜ç­¾åˆ°å®¢æˆ·ç«¯ï¼Œè‡³å°‘2ä¸ªactivity,ä¸€ä¸ªä¸ºç­¾åˆ°activity,å¦ä¸€ä¸ªä¸ºå·²ç­¾åˆ°å­¦å‘˜åˆ—è¡¨ ->finish
+2 ä»¿é€ ç³»ç»ŸSettingä»»æ„ä¸€ä¸ªç•Œé¢ï¼Œåšå‡ºdemo->finish
+3 å®‰è£…çœ‹æºç çš„å·¥å…·->finish
 2-25
-1 Ï´Ôè£¬»¹Êé
-2 Ñ§Ï°µ½ÉîÈëÆª39
-3 androidÉîÈëÇ³³öÑ§Ï°Íê4¸ö
-4 ÉîÈë±à¿´µ½36
+1 æ´—æ¾¡ï¼Œè¿˜ä¹¦
+2 å­¦ä¹ åˆ°æ·±å…¥ç¯‡39
+3 androidæ·±å…¥æµ…å‡ºå­¦ä¹ å®Œ4ä¸ª
+4 æ·±å…¥ç¼–çœ‹åˆ°36
 
 2-26
-1 ´òµç»°-¡·»¹¿î
-2 ÉîÈëÆª¿´µ½45
-3 ¼òµ¥¸ã¶¨vps °áÍß¹¤
+1 æ‰“ç”µè¯-ã€‹è¿˜æ¬¾
+2 æ·±å…¥ç¯‡çœ‹åˆ°45
+3 ç®€å•æå®švps æ¬ç“¦å·¥
 2-27
-1 ÍË¿Î
-2 ÉîÈëÆª¿´µ½45
-3 ÉîÈëÇ³³ö¿´Íê13¸ö android framework±àÒëÏµÍ³´ï²»µ½ÒªÇó
+1 é€€è¯¾
+2 æ·±å…¥ç¯‡çœ‹åˆ°45
+3 æ·±å…¥æµ…å‡ºçœ‹å®Œ13ä¸ª android frameworkç¼–è¯‘ç³»ç»Ÿè¾¾ä¸åˆ°è¦æ±‚
 2-28
-1 ÕûÀíÁËÖ®Ç°ËùÑ§µÄÒ»Ğ©ÒÉÎÊ
-2 ¼òµ¥Ñ§ÍêÁËÉîÈëÆªNDK
-3 ¿´ÁËstartActivity,androidÆô¶¯Ô´Âë
+1 æ•´ç†äº†ä¹‹å‰æ‰€å­¦çš„ä¸€äº›ç–‘é—®
+2 ç®€å•å­¦å®Œäº†æ·±å…¥ç¯‡NDK
+3 çœ‹äº†startActivity,androidå¯åŠ¨æºç 
 3-1
-1 ÕûÀísql²éÑ¯Óë´´½¨
-2 ½«´ËÎÄ¼ş¼ĞÉÏ´«µ½githubÉÏ
+1 æ•´ç†sqlæŸ¥è¯¢ä¸åˆ›å»º
+2 å°†æ­¤æ–‡ä»¶å¤¹ä¸Šä¼ åˆ°githubä¸Š
 3-2
-1 Context ¼òµ¥¿´ÁËÒ»ÏÂ
-2 android sqlite view ÄÜÓÃ ÒÔÇ°ÊÇÓï·¨´íÎó
-3 sql ¿´µ½ ´æ´¢¹ı³Ì£¬´¥·¢Æ÷£¬ÊÂÎñ µ«ĞèÁ·Ï°£¬±Ê¼ÇÒ²Î´ÕûÀí
+1 Context ç®€å•çœ‹äº†ä¸€ä¸‹
+2 android sqlite view èƒ½ç”¨ ä»¥å‰æ˜¯è¯­æ³•é”™è¯¯
+3 sql çœ‹åˆ° å­˜å‚¨è¿‡ç¨‹ï¼Œè§¦å‘å™¨ï¼Œäº‹åŠ¡ ä½†éœ€ç»ƒä¹ ï¼Œç¬”è®°ä¹Ÿæœªæ•´ç†
 
 3-3
-1 ¿´Ò»ÏÂlinux ¶àÏß³ÌÊµÏÖ
+1 çœ‹ä¸€ä¸‹linux å¤šçº¿ç¨‹å®ç°
 2 TextView Span
-3 ÏÂÔØ android 6£¬7Ô´Âë
-4 ÕÒÀÏÊ¦È¥ÖØĞÂ¿´Ò»ÏÂ¼Æ»®£¬project 
-5 sql ¾¡Á¿ÕûÀíÍê³É
-4 mediaplayer demoÍê³É
-5 Ğ´ÂÛÎÄ£¬¾«×¼Å©Òµ£¨·ÊÁÏ¼ÆËã£©
+3 ä¸‹è½½ android 6ï¼Œ7æºç 
+4 æ‰¾è€å¸ˆå»é‡æ–°çœ‹ä¸€ä¸‹è®¡åˆ’ï¼Œproject 
+5 sql å°½é‡æ•´ç†å®Œæˆ
+4 mediaplayer demoå®Œæˆ
+5 å†™è®ºæ–‡ï¼Œç²¾å‡†å†œä¸šï¼ˆè‚¥æ–™è®¡ç®—ï¼‰
  
 
-//ĞèÒªÖØµã¸´Ï°
+//éœ€è¦é‡ç‚¹å¤ä¹ 
 ContentResolver&ContentProvider
 	// Queries the user dictionary and returns results
 	mCursor = getContentResolver().query(
@@ -52,15 +52,15 @@ ContentResolver&ContentProvider
     mSortOrder);                        // The sort order for the returned rows
 	
 	
-BroadcastReceiver //ÔÚÖ÷Ïß³ÌÀï
+BroadcastReceiver //åœ¨ä¸»çº¿ç¨‹é‡Œ
 <intent-filter>
 	<action android:name="demo.example.as.myanroiddemo"/>
 </intent-filter>
-·¢ËÍÏûÏ¢ ÉèÖÃIntentµÄaction
+å‘é€æ¶ˆæ¯ è®¾ç½®Intentçš„action
 sendBoradcast
-//½ÓÊÜÏûÏ¢ºó±ØĞëÔÚ10sÄÚ´¦ÀíÍê³É£¨ANR£©£¬·ñÔò¶àÏß³Ì
-½ÓÊÕÏûÏ¢ Í¨¹ıaction¹ıÂË //Ó¦¸Ã¿ÉÒÔÓÃcategory,»òÕßÆäËûÊôĞÔ°É£¬
-´´½¨×Ô¼ºµÄBroadcastReceiver
+//æ¥å—æ¶ˆæ¯åå¿…é¡»åœ¨10så†…å¤„ç†å®Œæˆï¼ˆANRï¼‰ï¼Œå¦åˆ™å¤šçº¿ç¨‹
+æ¥æ”¶æ¶ˆæ¯ é€šè¿‡actionè¿‡æ»¤ //åº”è¯¥å¯ä»¥ç”¨category,æˆ–è€…å…¶ä»–å±æ€§å§ï¼Œ
+åˆ›å»ºè‡ªå·±çš„BroadcastReceiver
 
-TextView Span SpanStringBuilder ÔÚandroid.text,android.text.style //Á·Ï°
-×Ô¶¨Òå×é¼ş //xmlÎÄ¼şÖĞµÄattributeÊôĞÔ£¿ÈçºÎÊµÏÖ
+TextView Span SpanStringBuilder åœ¨android.text,android.text.style //ç»ƒä¹ 
+è‡ªå®šä¹‰ç»„ä»¶ //xmlæ–‡ä»¶ä¸­çš„attributeå±æ€§ï¼Ÿå¦‚ä½•å®ç°

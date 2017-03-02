@@ -1,4 +1,4 @@
-﻿irrespective 不考虑，不管regardless of
+irrespective 不考虑，不管regardless of
 splash 用...装饰，溅落
 geometry 几何
 sizePolicy 大小策略
