@@ -1,0 +1,201 @@
+
+create
+select
+insert 
+update
+drop
+
+索引 index
+是一个单独的，物理的数据库结构，它是某个表中一列或若干列值的集合和相应的约束的指向表中
+物理标识这些值的数据页的逻辑指针清单。表的存储由两个部分组成，一部分用来存放表的数据页面，另一部分存放索引页面
+视图 View
+关系数据库内提供用户以多种角度观察数据库中数据的重要机制。它是从一个表或多个表（视图）中导出的表，其只是一个虚表。
+约束 
+
+存储构成
+是一组已被编辑在一起的执行某种功能的SQL语句，这组语句可以用来向用户返回数据并且获得对应用逻辑的统一执行
+触发器
+与存储构成相似，事实上他们都是一组SQL语句，与存储过程不同的是触发器的执行。当表中一行被插入，修改，删除时触发器被执行。
+当数据被修改时，触发器可以保证输入的数据符合相应的原则
+数据字典
+用来存储有关数据的来源，说明，与其他数据的关系，用途和格式等信息
+以下 SQL server为例
+数据类型
+CHAR[n]		n 1-8000		
+NCHAR[n]	n 1-4000 unicode	
+VARCHAR[n]  n 1-8000
+NVARCHAR[n] n 1-4000 unicode
+
+INT/INTERGER 4个字节， -2^31  2^31-1
+SMALLINT	 2个字节
+TINYINT      1个字节
+DOUBLE
+BIT         布尔值
+FLOAT		
+REAL        精确到第7位小数
+DECIMAL(p,[s]) p为精度，s范围
+NUMERIC     与DECIMAL数据类型相同
+
+货币类型
+MONEY		-9220亿-9220亿，精度 万分之一
+SMALLMONEY  -20万-21万		精度 万分之一
+日期数据类型
+DATE		
+TIME			3个字节
+DATETIME		8个字节
+SMALLDATETIME	4个字节
+DATETIMEOFFSET	10个字节
+DATETIME2		6-8字节
+
+文本和图形数据
+TEXT		
+NTEXT
+IMAGE
+
+//table
+创建
+CREATE TABLE table_name
+[ON COMMIT {PERSERVE ROWS|DELETE ROWS}
+ (column_name datatype[length] [NULL|NOT NULL],....)|[LIKE table+name]|[table_constraint]
+ 
+ 默认值
+ DEFAULT
+ 
+表的修改
+ALERT TABLE table_name
+[ALTER COLUMN cloumn_name datatype] |
+[ADD cloumn_name datatype] |
+[DROP CLOUMN cloumn_name]
+
+ALTER TABLE table_name
+DROP CONSTAINT constaint_name
+
+字符串函数
+LEFT,LOWER,UPPER,LTRIM,REPEAT CONCAT
+EXP,FLOOR,ASIN,ABS...
+DATE
+
+列查询
+SELECT [DISTINCT] select_list
+FROM table_name[,table_name_N]
+[JOIN join_confition]
+[ WHERE search_condition]
+[ GROUP BY group_by_exp]
+[ HAVING search_condition]
+[ ORDER BY order_expr] [ASC|DEC]
+
+distinct 查询结果中有值相同的列，则只显示一列
+JOIN 连接查询
+GROUP BY 聚合查询
+HAVING 用于向GROUP BY 子句的结果中添加查询条件
+ASC 升序排列(默认)
+between语句
+where cloumn BETWEEN value1 AND value2
+IN / NOT IN
+where cloumn IN(value_list)
+where cloumn NOT IN(value_list)
+
+LIKE ,%,_,[]，* 通配符
+% 任何字符出现的次数
+_ 匹配单个字符
+[] 匹配单个字符其必须在[]中的一个
+[^]
+
+聚合查询
+SUM(),AVG(),MAX(),MIN(),COUNT()
+	SELECT SUM(cloumn_name) FROM table_name;
+	注意：COUNT()计算NULL值，AVG()忽略NULL
+多表连接类型
+1 自连接 自身与自己连接
+SELECT T1.课程编号，T1.课程名称,T2.专业编号,T2.教师编号
+FROM 课程信息 AS T1，课程信息 AS T2
+WHERE T1.课程编号=T2.课程编号
+2 自然连接
+
+3 内连接
+		等值连接	查询结果中列出被连接表中的所有列，包括其中的重复列
+		SELECT 学号,姓名,性别,出生年月,入学时间,专业名称,学制,所属学科
+		FROM 学生信息 AS B INNER JOIN 专业信息 AS T
+		ON B.专业编号=T.专业编号
+		ORDED BY B.专业编号
+		不等连接			
+4 外连接 返回查询结果集合中的不仅包含符合连接条件的行，还包括左表(左连接时)，右表(右连接时)，两个边接表(全外连接时的表)
+		左外连接 LEFT JOIN
+		右外连接 RIGHT JOIN
+		全外部连接 FULL JOIN
+5 交叉连接 它返回被连接的两个表的笛卡尔积，返回第一个表的每一行*另一表的每一行
+		CROSS JOIN
+
+插入，更新，删除
+		INSERT INTO table_name(loumn1,cloumn2,...)
+		VALUES (values1,values2,..)
+插入多个值(可能有用)
+		INSERT INTO table_name(cloumn1,column2,....)
+		VALUES (values11,values21,...),
+		(values21,values22,...),
+		...
+INSERT SELECT
+	INSERT INTO table_name1(column1,column2,...)
+		SELECT column1,column2,...
+			FROM table_name2
+				WHERE search_condition
+	1 table_name1与table_name2不能为同一表
+	2 INSERT INTO 中，列的数据类型必须与从SELECT 语句返回的列的数据类型相同
+	用途 备份表
+更新
+UPDATE table
+SET newvalue
+WHERE condition
+删除
+DELETE FROM table
+WHERE condition
+注意:删除时表间的关系
+
+视图与索引的操作
+视图 VIEW 是从一个或者多个表及其他视图中通过SELECT语句导出的虚拟表
+CREATE VIEW view_name [(column1,column2,...)]
+[WITH ENCRYPTION]
+AS SELECT_statment
+[WITH CHECK OPTION]
+
+with encryption 加密，不能察看和修改原脚本
+with check option 起限定作用，使数据的改变不能超过with check option所约束的范围，其保证只有视图可读的数据才能修改
+
+with check option 视图是可嵌套的，check option默认会当前视图及所有子视图 CASCADED
+				LOCAL 仅对当前视图进行正确性检查
+
+注意 视图其关联的基本表若添加了新字段，所有语气关联的视图全部重新建立新视图
+修改，删除
+1 修改视图的数据时，不能同时修改两个及以上的基表
+2 不能修改那些经过计算得到的字段
+3 如果视图引用多个表则DELETE 无法使用，UPDATE,INSERT被更新的列必须同一个表
+插入
+当视图所依赖的基表有多个时，不允许向该视图插入数据
+
+删除视图
+DROP VIEW view_name
+
+索引
+特征 唯一性索引和复合索引
+唯一性索引：索引列中的全部数据是唯一的
+复合索引：一个索引创建在两个及以上的列上。复合索引中的列顺序最优先使用的应该排在前
+类型
+聚簇索引
+类似树状索引，聚簇索引每个表只能创建一个，表中的行的物理顺序和索引中的行的物理顺序一致
+数据值总是按升序排列
+非聚簇索引
+有两种 1 在没有聚簇索引的表上创建的非聚簇索引
+	   2 在有聚簇索引的表上创建的非聚簇索引
+	   
+索引创建原则
+1 在经常用于在连接的列上创建索引，这些列主要是一些外键
+2 在经常需要排序的列上创建索引
+3 在经常使用WHERE条件中的列上面创建索引
+
+CREATE [UNIQUE] [NONCLUSTERED][....] <indexname> 
+ON schema_name (column_name[次序][,cloumn[次序],...)
+
+CREATE INDEX UNIQUE 学生信息_学号_index
+ON 学生信息(学号)
+删除索引
+DROP INDEX

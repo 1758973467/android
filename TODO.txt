@@ -20,11 +20,22 @@
 2 深入篇看到45
 3 深入浅出看完13个 android framework编译系统达不到要求
 2-28
-1 mediaplayer demo完成
-1 下载 android 6，7源码
-2 写论文，精准农业（肥料计算）
-4 学习一下外键的知识
-5  ？android sqlite view 好像不可用
+1 整理了之前所学的一些疑问
+2 简单学完了深入篇NDK
+3 看了startActivity,android启动源码
+3-1
+1 整理sql查询与创建
+2 将此文件夹上传到github上
+
+
+
+3-2
+1 看一下linux 多线程实现
+2 ？android sqlite view 好像不可用
+3 mediaplayer demo完成
+4 下载 android 6，7源码
+5 写论文，精准农业（肥料计算）
+ 
 
 
 //需要重点复习
@@ -48,6 +59,5 @@ sendBoradcast
 接收消息 通过action过滤 //应该可以用category,或者其他属性吧，
 创建自己的BroadcastReceiver
 
- startActivity的机制//看源码
- TextView Span SpanStringBuilder 在android.text,android.text.style //练习
- 自定义组件 //xml文件中的attribute属性？如何实现
+TextView Span SpanStringBuilder 在android.text,android.text.style //练习
+自定义组件 //xml文件中的attribute属性？如何实现
