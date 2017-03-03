@@ -30,27 +30,22 @@
 1 Context 简单看了一下
 2 android sqlite view 能用 以前是语法错误
 3 sql 看到 存储过程，触发器，事务 但需练习，笔记也未整理
-
 3-3
 1 看一下linux 多线程实现
-2 TextView Span
+2 TextView Span SpanStringBuilder //想要clickspan触发事件MoveMentMethod
 3 下载 android 6，7源码
-4 找老师去重新看一下计划，project 
-5 sql 尽量整理完成
-4 mediaplayer demo完成
-5 写论文，精准农业（肥料计算）
- 
+4 sql 尽量整理完成
 
+
+3-4
+1 自定义组件 //xml文件中的attribute属性？如何实现
+2 mediaplayer demo完成
+3 写论文，精准农业（肥料计算）//无限延期
+4 找老师去重新看一下计划，project 
+5 在android.text,android.text.style //练习
 //需要重点复习
 ContentResolver&ContentProvider
 	// Queries the user dictionary and returns results
-	mCursor = getContentResolver().query(
-    UserDictionary.Words.CONTENT_URI,   // The content URI of the words table
-    mProjection,                        // The columns to return for each row
-    mSelectionClause                    // Selection criteria
-    mSelectionArgs,                     // Selection criteria
-    mSortOrder);                        // The sort order for the returned rows
-	
 	
 BroadcastReceiver //在主线程里
 <intent-filter>
@@ -62,5 +57,4 @@ sendBoradcast
 接收消息 通过action过滤 //应该可以用category,或者其他属性吧，
 创建自己的BroadcastReceiver
 
-TextView Span SpanStringBuilder 在android.text,android.text.style //练习
-自定义组件 //xml文件中的attribute属性？如何实现
+

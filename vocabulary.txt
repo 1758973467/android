@@ -17,3 +17,4 @@ mock 伪造的，模拟的
 exclusive 排外的，单独的
 tape 磁带
 procedure 过程
+replication 复制，折叠

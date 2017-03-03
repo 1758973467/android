@@ -238,3 +238,164 @@ FOR REPLICATION 表示创建的存储过程只能在复制过程，若指定此�
 
 注意：1 除了CREATE PROCEDURE之外还有CREATE DEFAULT，CREATE RULE,CREATE TRIGGER,CREATE VIEW语句不能与其他语句位于同一批之内
 	  2 不能在一个批中修改一个表的结构，然后在同一个批中引用刚修改的新列
+
+USE 教务管理系统
+GO
+CREATE PROCEDURE 查看课程
+AS
+SELECT 课程编号，课程名称，专业编号，课程编号，教师编号，姓名，职称
+FROM 课程信息，教师信息
+WHERE 课程信息.教师编号=教师信息.教师编号
+ORDER BY 课程编号
+GO
+执行存储过程
+[{EXEC|EXECUTE}]{
+[@retrun_status=]
+[procedure_name [;number]| @procedure_name_var]
+	[[@paramaeter= ]{ value|@variable[OUTPUT]|DEFAULT]}]
+	[,....n]
+	[WITH RECOMPILE]
+}
+@return_status 为可选的整型变量，存放存储过程的返回变量。这个变量用在EXECUTE语句前，且必须在存储过程中声明
+@procedure_name_var为局部定义的变量名
+@variable 存储参数或返回参数的变量
+
+声明局部变量
+DECLARE @variable_name data_type
+自动初始化为NULL
+SET @variable_name=expression
+全局变量
+只能使用服务器定义的，引用时用@@开头
+
+USE 教务管理系统
+GO
+CREATE PROCEDURE 查看指定课程
+	@name	NVCHAR(30)
+	AS
+	SELECT 课程编号，课程名称，专业编号，课程编号，教师编号，姓名，职称
+	FROM 课程信息，教师信息
+	WHERE 课程信息.教师编号=教师信息.教师编号 AND 课程编号=@name
+GO
+执行 
+USE 教务管理系统
+EXEC 查看指定课程
+@name=4
+GO
+
+
+控制语句
+BEGIN 
+ sql_statement
+END
+
+IF expression
+BEGIN
+ sql_statement
+END
+ELSE expression
+BEGIN
+ sql_statement
+END
+
+CASE input_expression
+ WHEN THEN
+END
+
+WHILE BREAK CONTINUE
+GOTO
+RETURN
+WAITFOR {DELAY '延时时间'|TIME '到达时间'}
+
+用户自定义函数
+
+
+触发器
+1 实现表的级联控制
+2 实现比CHECK约束更加复杂的限制
+3 实现比较数据修改前后时刻表的状态
+4 实现对表的同一操作拥有多个不同的触发器
+5 实现显示错误信息
+分类 DML(数据操作语言),DDL(数据定义语言)
+DML 触发器
+CREATE TRIGGER triger_name
+ON {table_name|view_name}
+[WITH ENCRYPTION]
+{FOR | AFTER | INSTEAD OF}
+{[INSERT] [,] [UPDATE] [,] [DELETE]}
+[WITH APPEND]
+[NOT FOR REPLICATION]
+AS 
+sql_statement[...n]
+
+DDL 触发器
+CREATE TRIGGER trigger_name
+ON {ALL SERVER |DATABASE }
+[WITH ENCRYPTION]
+FOR {event_type | event_group}[,....n]
+AS sql_statement
+
+事务控制与并发处理
+事务的属性
+原子性，一致性，隔离性，持久性
+必须作为工作的最小单位
+每个事务作为数据的一致性
+一个事务所做的修改必须与其他事务所做的修改隔离
+事务完成后所对数据库将永久保持
+事务类型
+1 系统提供的事务
+2 用户自定义的事务
+系统提供事务语句
+ALTER TABLE CREATE,DELETE,DROP,FETCH,GRANT,INSERT,OPEN
+REBOKR,SELECT,UPDATE,TRUNCATE TABLE
+事务明确结束 COMMIT 提交语句, ROLLBACK 取消语句
+事务分为 自动提交事务，显式事务，隐式事务，批处理级事务
+显式事务指在每个事务BEGIN TRANSCATION语句显式开始，以COMMIT,ROLLBACK语句显式结束
+
+不能用于事务的操作
+ create datebase,alter database,drop database,restore database,load database,back log,restore log,update statistics
+ grant,dump tran ,disk init,reconfigure
+ 
+事务处理语句
+ BEGIN TRANSACTION
+ COMMIT TRANSACTION
+ ROLLBACK TRANSACTION
+ SAVE TRANSACTION save_point自定义保存点名称
+ ROLLBACK TRANSACTION save_point回滚到自定义的保存点
+嵌套事务
+外部事物rollback后，里面的不管什么状态，都会rollback
+
+
+并发访问
+丢失更新 当两个及以上事务选择同一事务，并且基于最初选定值更新该数据时，会发生丢失更新
+读脏数据 多个事务时，一个事务rollback,其他事务可能读的是rollback之前的事务
+不能重复读 
+幻影读
+
+锁的类型
+基本锁 共享锁，排它锁
+专用锁 更新锁，意向锁
+架构锁 架构修改锁，架构稳定锁
+
+使用锁
+NOLOCK(不加锁),HOLDOLOCK(保持锁),UPDLOCK(修改锁),TABLOCK(表锁),PAGLOCK(页锁),TABLOCKX(排它表锁)
+事务隔离级别
+未提交读
+提交读
+可重复读
+可串行读
+SET TRANSACTION ISOLATION LEVEL
+{
+	READ UNCOMMTTED |
+	READ COMMENTED |
+	REPLICATION READ |
+	SERIALZABLE
+}
+事务隔离级别设置为 REPLICATION READ 
+SET TRANSACTION ISOLATION LEVEL REPLICATION READ
+
+阻塞
+提交时间长的查询
+查询不舍当地使用游标
+取消没有提交或返回的查询
+应用程序没处理完所有结果
+

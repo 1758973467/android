@@ -128,8 +128,8 @@
   //深入浅出作业
   了解概念，看看Linux 多线程 ，设计与实现的书籍
   //面试题
-  为何Android没有Main函数
-  Android应用程序是如何启动和退出的
+  为何Android没有Main函数		通过PackageManager 识别MAIN,LAUNCHER
+  Android应用程序是如何启动和退出的 
   //深入浅出作业
   写一个demo,打印出当前进程等级并且用PackageManager分析生命周期
   Context源码，及相关常用方法

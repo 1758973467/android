@@ -11,9 +11,9 @@ ContentResolver&ContentProvider
 	mCursor = getContentResolver().query(
     UserDictionary.Words.CONTENT_URI,   // The content URI of the words table
     mProjection,                        // The columns to return for each row
-    mSelectionClause                    // Selection criteria
-    mSelectionArgs,                     // Selection criteria
-    mSortOrder);                        // The sort order for the returned rows
+    mSelectionClause                    // where
+    mSelectionArgs,                     // 没有完全等效项。选择参数会替换选择子句中 ? 占位符。
+    mSortOrder);                        // ORDER BY col,col,...
 
 URI content://user_dictionary/words
 有时contentprovider 需要Content Provider Permissions
