@@ -44,3 +44,56 @@ style theme
 <com.android.notepad.MyEditText
   id="@+id/note"
   ... />
+
+  
+自定义属性
+<resources>
+  <declare-styleable name="ImageTextView">
+        <attr name="select_src" format="reference" />
+        <attr name="normal_src" format="reference" />
+        <attr name="select_text_color" format="color" />
+        <attr name="normal_text_color" format="color" />
+        <attr name="image_text_padding" format="dimension"/>
+        <attr name="android:textSize"/>
+        <attr name="android:layout_gravity" />
+        <attr name="android:text" />
+    </declare-styleable>
+</resources>
+
+
+public UpImageTextView(Context context, AttributeSet attrs, int defStyleAttr) {
+    super(context, attrs, defStyleAttr);
+    // 加载布局文件
+    LayoutInflater.from(context).inflate(R.layout.down_text_image,this);
+        imageView = (ImageView) findViewById(R.id.image);
+        textView = (TextView) findViewById(R.id.text);
+
+    // 获取属性集
+  	// 这里获取的就是我们再res 下value中声明的ImageTextView属性集
+  	// 当然是由IDE自动在R文件中生成的。
+        final TypedArray a = context.obtainStyledAttributes(
+                attrs, R.styleable.ImageTextView);
+
+    // 通过声明的format 就可以定向获取到属性
+  	// R.styleable 都是自动生成的，具体属性名都是跟在声明的style名字后面的
+  	// R.styleable.ImageTextView_normal_src对应的就是 arrts.xml中的
+  	// <attr name="normal_src" format="reference" />
+
+       int selectRes = a.getResourceId(R.styleable.ImageTextView_select_src,0);
+       int normalRes = a.getResourceId(R.styleable.ImageTextView_normal_src,0);
+       int selectTextColor = a.getResourceId(R.styleable.ImageTextView_select_text_color,R.color.green);
+       int normalTextColor = a.getResourceId(R.styleable.ImageTextView_normal_text_color, R.color.title);
+      int textSize = a.getDimensionPixelSize(R.styleable.ImageTextView_android_textSize, 0);
+        int image_text_padding = a.getDimensionPixelOffset(R.styleable.ImageTextView_image_text_padding,0);
+        String text = a.getString(R.styleable.ImageTextView_android_text);
+
+        a.recycle();
+        imageView.setImageResource(normalRes);
+        textView.setTextColor(getResources().getColor(normalTextColor));
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
+        textView.setText(text);
+        textView.setPadding(0,image_text_padding,0,0);
+}
+依次获取属性，然后使用。弹药注意的是，获取完自定义或者本身的属性后，一定要将final TypedArray a返回到用之前的状态，可以看到TypedArray是context中获取的，它是一个环境中统一使用的，所以用完记得要还。
+
+ a.recycle();

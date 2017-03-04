@@ -125,7 +125,7 @@
   Android多线程如何实现
   Android多线程与Linux系统的关系
   Android异步任务有什么办法来实现  thread,Runable,Handler,AsyncTask
-  //深入浅出作业
+  //深入浅出作业 完成
   了解概念，看看Linux 多线程 ，设计与实现的书籍
   //面试题
   为何Android没有Main函数		通过PackageManager 识别MAIN,LAUNCHER

@@ -54,6 +54,33 @@ multimedia
 	语音识别 Recognition1
 MediaStore
 	
-	
-	
+Camera
+capture image
+1 检测Camera状态
+2 创建预览和实现SurfaceHolder接口
+3 建立预览布局
+4 设置监听
+5 保存文件
+6 释放Camera
+capture video
+1 打开camera camera.open()
+2 准备SurfaceView Camera.setPreviewDisplay
+3 开始记录Video 
+	1 Unlock camera Camera.unlock()
+	2 配置MediaRecoder 
+		1 setCamera()
+		2 setAudioSource()
+	 	3 SetVideoSource()
+		4 MediaRecoder.setProfile outputformat,audioEncoder,VideoEncoder
+		5 setOutputFile
+		6 setPerviewDisplay()
+	3 准备MediaRecoder MediaRecoder.prepare()
+	4 MediaRecoder.start()
+4 停止记录Recording Video 
+	1 MediaRecoder.stop()
+	2 MediaRecoder.reset()//(optional)将Profiles remove from recoder
+	3 Release MediaRecoder
+	4 Camera.lock()
+5 Camera.stopPreview
+6 Release Camera
 	
