@@ -130,11 +130,17 @@
   //面试题
   为何Android没有Main函数		通过PackageManager 识别MAIN,LAUNCHER
   Android应用程序是如何启动和退出的 
-  //深入浅出作业
-  写一个demo,打印出当前进程等级并且用PackageManager分析生命周期
+  //深入浅出作业 写一个demo,打印出当前进程等级并且用PackageManager分析生命周期
   Context源码，及相关常用方法
-  
-  
-  
-  
-  
+  //面试题
+  什么是蓝牙，如何使用
+  建立蓝牙端口，接收远端蓝牙数据的过程
+  如何进行蓝牙设备的搜索与配对？建立连接的过程是什么？
+  //深入浅出作业
+  能够独立开发一个蓝牙聊天程序
+  //面试题
+  移动的JIL Widegt和Opera Widget，这些Widget和android framework widget一样吗
+  Mobile Widget需要支持的特性
+  如何在运行时注册Webkit的JS扩展对象，让其支持WAC2.0
+  //深入浅出作业
+  实现MobileWidget课程中的例子
