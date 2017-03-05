@@ -1,0 +1,18 @@
+Multithread
+Handler,
+AsyncTask
+
+Activity.runOnUiThread(Runnable)
+View.post(Runnable)
+View.postDelay(Runnable,long)
+
+AsyncTask
+必须实现
+doInBackground()//后台处理的任务
+onPostExecute()//后台处理完后在UI线程做的
+
+UI线程 new DownloadTask().execute(url1);
+onPreExecute()在execute()方法调用之前执行
+onProgressUpdate()在UIthread显示进度
+isCanceled()在doInBackground true用户取消
+注意：只能执行一次，且必须在UI thread

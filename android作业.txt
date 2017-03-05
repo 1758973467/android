@@ -144,3 +144,16 @@
   如何在运行时注册Webkit的JS扩展对象，让其支持WAC2.0
   //深入浅出作业
   实现MobileWidget课程中的例子
+  //面试题 使用Handler是异步的，她会建立新线程吗？//Looper是由系统控制，其并未启动新线程
+  Handler是在主线程内吗
+  Handler的post和sendMessage方法，使用的是一个队列还是两个
+  子线程建立一个Handler,然后sendMessage会怎样
+  子线程建立handler,构造是传入主线程的，Looper
+  //深入浅出作业
+  用Handler实现图片更新的例子
+  研究Music app控制player controller的时候的Handler应用
+  //面试题
+  AsyncTask是多线程吗?//是，还用了线程池 与Handler相比，AsyncTask消耗资源情况如何？//code上少，资源上可能多
+  //深入浅出作业
+  AsyncTask从网络更新并显示图片
+  
