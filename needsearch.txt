@@ -1,5 +1,4 @@
 新概念及其他陌生
-JetPlayer
 ExoPlayer
 wac2.0 module
 appni
