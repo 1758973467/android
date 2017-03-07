@@ -46,13 +46,15 @@
 1 找老师去重新看一下计划，project 
 2 测试mediaStore //并不实用，有的手机ok,有的手机不行
 3 test videoView 
-
-
 3-7
 1 使用MediaPlayer实现一个简单的媒体播放器 
-2 在android.text,android.text.style //练习
-3 实现一个简单的照相机，要求在监测到人脸时实现自动对焦。
-4 写论文，精准农业（肥料计算）//无限延期
+2 实现一个简单的照相机，要求在监测到人脸时实现自动对焦。//照相机简单实现，但还无法对焦
+3 java收发消息
+
+
+3-8
+1 在android.text,android.text.style //练习
+2 写论文，精准农业（肥料计算）//无限延期
 
 接收消息 通过action过滤 //应该可以用category,或者其他属性吧，
 创建自己的BroadcastReceiver
