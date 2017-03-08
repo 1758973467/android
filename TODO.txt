@@ -50,24 +50,15 @@
 1 使用MediaPlayer实现一个简单的媒体播放器 
 2 实现一个简单的照相机，要求在监测到人脸时实现自动对焦。//照相机简单实现，但还无法对焦
 3 java收发消息
-
-
 3-8
-1 在android.text,android.text.style //练习
-2 写论文，精准农业（肥料计算）//无限延期
+1 3-7日里第二项自动对焦已经camera自动实现
+2 在android.text,android.text.style //练习
+3 用Handler实现图片更新的例子
+4 AsyncTask从网络更新并显示图片
 
-接收消息 通过action过滤 //应该可以用category,或者其他属性吧，
-创建自己的BroadcastReceiver
 
-//需要重点复习
-ContentResolver&ContentProvider
-	// Queries the user dictionary and returns results
-BroadcastReceiver //在主线程里
-<intent-filter>
-	<action android:name="demo.example.as.myanroiddemo"/>
-</intent-filter>
-发送消息 设置Intent的action
-sendBoradcast
-//接受消息后必须在10s内处理完成（ANR），否则多线程
+
+3 写论文，精准农业（肥料计算）//无限延期
+
 
 
